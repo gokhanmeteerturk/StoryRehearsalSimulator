@@ -8,10 +8,10 @@ import settings
 
 router = APIRouter()
 
-
 templates = Jinja2Templates(directory="templates")
-templates.env.globals['server'] = settings.SERVER_METADATA
-templates.env.globals['theme'] = settings.THEME
+
+
+# templates.env.globals['projectname'] = "Project Name"
 
 @router.get("/", response_class=HTMLResponse)
 async def giveaway(request: Request):
